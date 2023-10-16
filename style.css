@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: #fff;
+    padding: 10px;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align:middle;
+    display: inline-block;
+}
+
+.grid-wrapper > div{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.grid-wrapper > div > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+
+}
+
+/*apply the wide in class image*/
+.grid-wrapper .wide{
+    grid-column: span 2;
+}
+
+/*apply the tall in class image*/
+.grid-wrapper .tall{
+    grid-row: span  2;
+}
+
+/*apply the big in class image*/
+.grid-wrapper .big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.valorant{
+    grid-column: span 5;
+    grid-row: span 3;
+}
+
+
+@media (max-width:961px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+    .grid-wrapper{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
+    
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        vertical-align:middle;
+        display: inline-block;
+    }
+
+    .grid-wrapper .tall{
+        grid-row: span  2;
+    }
+    
+    /*apply the big in class image*/
+    .grid-wrapper .big{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .valorant{
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+
+}
+
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+.me-2 {
+    margin-right: 0.5rem!important;
+}
+
+.logo{
+    border-radius: 5px;
+}
+
+
+
+
+
+/*
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px;
+    gap: 10px; 
+    padding: 10px;
+}
+
+.container{
+    display: grid-wrapper;
+    height: 600px;
+    width: 800px;
+}
+
+
+
+.yoru{
+    background-color: blue;
+}
+
+.reyna{
+    background-color: blueviolet;
+}
+
+.sage{
+    background-color: aqua;
+}
+
+.phoenix{
+    background-color: crimson;
+}
+
+.raze{
+    background-color: chocolate;
+}*/
